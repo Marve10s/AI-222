@@ -131,7 +131,7 @@ h2 {
 }
 
 /* Style for the week toggle button */
-#toggleWeekBtn {
+.toggle-week-btn {
   margin: 20px auto;
   padding: 10px 20px;
   font-size: 18px;
@@ -147,13 +147,13 @@ h2 {
   display: block;
 }
 
-#toggleWeekBtn:hover {
+.toggle-week-btn:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
 }
 
 /* Style for the current week display */
-#currentWeek {
+.current-week {
   text-align: center;
   margin: 20px auto;
   padding: 10px;
@@ -166,7 +166,15 @@ h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Existing styles remain unchanged */
+/* Style for the current date display */
+.current-date {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-align: center; /* Center text within its grid cell */
+}
+
+/* Layout adjustments for the .week-info section */
 .week-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
@@ -175,48 +183,13 @@ h2 {
   padding: 5px;
 }
 
-#toggleWeekBtn {
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: 600;
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition-duration: 0.3s;
-  transition-property: box-shadow, transform;
-}
-
-#toggleWeekBtn:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scale(1.05);
-}
-
-#currentWeek {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  background-color: #ffebcc;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center; /* Center text within its grid cell */
-}
-
-#currentDate {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-  text-align: center; /* Center text within its grid cell */
-}
-
 @media (max-width: 800px) {
   .week-info {
     grid-template-columns: 1fr; /* Make the grid a single column */
     gap: 10px; /* Reduce the gap between elements for smaller screens */
     text-align: center; /* Center text alignment */
   }
+
   .wrapper {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(100px, auto);
@@ -232,16 +205,17 @@ h2 {
     padding: 10px 5px; /* Adjust padding for small screens */
   }
 
-  #toggleWeekBtn {
+  .toggle-week-btn {
     font-size: 16px;
     padding: 8px 15px;
   }
 
-  #currentWeek,
-  #currentDate {
+  .current-week,
+  .current-date {
     font-size: 16px; /* Slightly smaller text for very small screens */
     padding: 8px;
   }
+
   .wrapper {
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(100px, auto);
