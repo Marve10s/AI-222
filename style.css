@@ -23,6 +23,14 @@ h2 {
   margin-top: 5px;
 }
 
+.teacher-name {
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .container {
   margin: 0 auto;
 }
@@ -171,23 +179,23 @@ h2 {
   font-size: 18px;
   font-weight: 600;
   color: #333;
-  text-align: center; /* Center text within its grid cell */
+  text-align: center;
 }
 
 /* Layout adjustments for the .week-info section */
 .week-info {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
-  align-items: center; /* Center items vertically within each grid cell */
-  justify-items: center; /* Center items horizontally within each grid cell */
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   padding: 5px;
 }
 
 @media (max-width: 800px) {
   .week-info {
-    grid-template-columns: 1fr; /* Make the grid a single column */
-    gap: 10px; /* Reduce the gap between elements for smaller screens */
-    text-align: center; /* Center text alignment */
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
   }
 
   .wrapper {
@@ -202,7 +210,7 @@ h2 {
 
 @media (max-width: 600px) {
   .week-info {
-    padding: 10px 5px; /* Adjust padding for small screens */
+    padding: 10px 5px;
   }
 
   .toggle-week-btn {
@@ -212,7 +220,7 @@ h2 {
 
   .current-week,
   .current-date {
-    font-size: 16px; /* Slightly smaller text for very small screens */
+    font-size: 16px;
     padding: 8px;
   }
 
