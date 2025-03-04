@@ -19,6 +19,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <title>AI-222 Timetable</title>
   </head>
   <body>
@@ -26,7 +30,12 @@
       <!-- Button to toggle weeks -->
 
       <div class="week-info">
-        <div class="current-date" id="currentDate"></div>
+        <div class="navigation">
+          <div class="current-date" id="currentDate"></div>
+          <a href="deadlines.html" class="deadlines-link"
+            >Переглянути дедлайни</a
+          >
+        </div>
         <button class="toggle-week-btn" id="toggleWeekBtn">
           Перемкнути на парний тиждень
         </button>
@@ -41,18 +50,91 @@
           <div class="monday">
             <div class="title">Понеділок</div>
 
-            <div class="odd-week">
-              <h2 class="name-class">Практики культурних комунікацій</h2>
+            <div class="common-week">
+              <h2 class="name-class">Фізичне виховання</h2>
+              <h2 class="block-button-practice">Лекція</h2>
+              <h2 class="time">8:00-9:50</h2>
+              <span class="teacher-name">Бочков П.М. | Бєсєда В.В.</span>
+              <div class="button">
+                <div class="button-group">
+                  <a
+                    href="https://meet.google.com/bpk-hxhm-ifd"
+                    class="button-link"
+                    target="_blank"
+                    >ВД20-01</a
+                  >
+                  <i
+                    class="fas fa-users student-list-icon"
+                    onclick="toggleStudentList('group1')"
+                  ></i>
+                  <div class="student-list" id="group1">
+                    <h3>Група ВД20-01</h3>
+                    <ul>
+                      <li>Балабан Костянтин Андрійович</li>
+                      <li>Василенко Богдан Олександрович</li>
+                      <li>Ганчар Семен Сергійович</li>
+                      <li>Довбня Дмитро Володимирович</li>
+                      <li>Елькамалі Махмуд Ібрагім Тарекович</li>
+                      <li>Кричун Артем Олександрович</li>
+                      <li>Кулібаба Сергій Сергійович</li>
+                      <li>Лученко Олександр Андрійович</li>
+                      <li>Лясковський Артем Андрійович</li>
+                      <li>Мазурець Андрій Вікторович</li>
+                      <li>Макаров Артур Олександрович</li>
+                      <li>Маслюков Павло Євгенійович</li>
+                      <li>Моісєєв Данііл Дмитрович</li>
+                      <li>Нікітенко Марія Сергіївна</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="button-group">
+                  <a
+                    href="https://meet.google.com/ejo-gmeg-qzn"
+                    class="button-link"
+                    target="_blank"
+                    >ВД20-02</a
+                  >
+                  <i
+                    class="fas fa-users student-list-icon"
+                    onclick="toggleStudentList('group2')"
+                  ></i>
+                  <div class="student-list" id="group2">
+                    <h3>Група ВД20-02</h3>
+                    <ul>
+                      <li>Паталашко Олександр Юрійович</li>
+                      <li>Рогова Єлизавета Романівна</li>
+                      <li>Ромашкін Артем</li>
+                      <li>Рубан Софія Леонідівна</li>
+                      <li>Рубаха Дмитрій Олександрович</li>
+                      <li>Свердан Андрій Сергійович</li>
+                      <li>Сивізіна Ірина Олексіївна</li>
+                      <li>Сидоров Нікіта Олексійович</li>
+                      <li>Симонов Гордій Олександрович</li>
+                      <li>Таран Максим Олександрович</li>
+                      <li>Турбаров Ігор Олександрович</li>
+                      <li>Шлапак Владислав Олегович</li>
+                      <li>Якуша Дар'я Олександрівна</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="common-week">
+              <h2 class="name-class">
+                Технології розподілених систем та паралельних обчислень
+              </h2>
               <h2 class="block-button-lection">Лекція</h2>
-              <h2 class="time">8:00-9:35</h2>
-              <span class="teacher-name">Прокоповіч Л.В.</span>
+              <h2 class="time">9:50-11:25</h2>
+              <span class="teacher-name">Агаджанян А.Р.</span>
               <div class="meet-login">
-                Meeting ID: 690 593 3307 <br />
-                Passcode: Jxz4aV
+                Meeting ID: 755 2303 1710 <br />
+                Passcode: 1
               </div>
               <div class="button">
                 <a
-                  href="https://us05web.zoom.us/j/6905933307?pwd=QzA2bU1ndVBzT2x4YjBtQUFmeklrQT09"
+                  href="https://us04web.zoom.us/j/75523031710?pwd=8qb2Fz4vdLcajVKsxlX7chpuQ6PCSH.1"
                   class="button-link"
                   target="_blank"
                   >Підключитись</a
@@ -61,186 +143,34 @@
             </div>
 
             <div class="common-week">
-              <h2 class="name-class">Комп'ютерні мережі</h2>
+              <h2 class="name-class">Моделювання систем</h2>
               <h2 class="block-button-lection">Лекція</h2>
-              <h2 class="time">9:50-11:25</h2>
-              <span class="teacher-name">Кузнецов М. О./Засидь Андрій</span>
+              <h2 class="time">11:40-13:15</h2>
+              <span class="teacher-name">д. Ніколенко А.О. </span>
+              <div class="meet-login">
+                Meeting ID: 758 1538 7400 <br />
+                Passcode: dvP2D1
+              </div>
               <a
-                href="https://us04web.zoom.us/j/9259707912?pwd=rDktkUw9qYd6nSRfiEN2Ws7VFKbVrl.1"
+                href="https://us02web.zoom.us/j/75815387400?pwd=NmlqdGZmbW5yK1BuQmFiZXB1S2lKQT09"
                 class="button-link"
                 target="_blank"
                 >Підключитись</a
               >
             </div>
-
-            <div class="odd-week">
-              <h2 class="name-class">Технології створення ПП</h2>
-              <h2 class="block-button-lab">Лабораторна робота</h2>
-              <h2 class="time">11:40-13:15</h2>
-              <span class="teacher-name">Блажко О. А.</span>
-              <div class="button">
-                <a
-                  href="https://us02web.zoom.us/j/87647753497?pwd=eTJzOGo5bGZnNC9NMGRBVFNKRVlQUT09"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div>
-
-            <div class="even-week">
-              <h2 class="name-class">ВЕБ-технології та ВЕБ-дизайн</h2>
-              <h2 class="block-button-lab">Лабораторна робота</h2>
-              <h2 class="time">11:40-13:15</h2>
-              <span class="teacher-name">Стетхєм</span>
-              <div class="button">
-                <a
-                  href="https://meet.google.com/rqx-erms-vqr"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div>
-
-            <!-- <div class="common-week">
-              <h2 class="name-class">Комп'ютерні мережі</h2>
-              <h2 class="block-button-lab">Лабораторна робота</h2>
-              <h2 class="time">13:30-15:05</h2>
-              <div class="button">
-                <a
-                  href="https://us04web.zoom.us/j/9259707912?pwd=rDktkUw9qYd6nSRfiEN2Ws7VFKbVrl.1"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div> -->
           </div>
 
           <!-- Tuesday Schedule -->
           <div class="tuesday">
             <div class="title">Вівторок</div>
 
-            <div class="even-week">
-              <h2 class="name-class">Практики культурних комунікацій</h2>
-              <h2 class="block-button-practice">Практика</h2>
-              <h2 class="time">8:00-9:35</h2>
-              <span class="teacher-name">Прокоповіч Л.В.</span>
-              <div class="meet-login">
-                Meeting ID: 690 593 3307 <br />
-                Passcode: Jxz4aV
-              </div>
-              <div class="button">
-                <a
-                  href="https://us05web.zoom.us/j/6905933307?pwd=QzA2bU1ndVBzT2x4YjBtQUFmeklrQT09"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div>
-
-            <div class="common-week">
-              <h2 class="name-class">Інтелектуальний аналіз даних</h2>
-              <h2 class="block-button-lection">Лекція</h2>
-              <h2 class="time">9:50-11:25</h2>
-              <span class="teacher-name">Антощук С.Г.</span>
-              <div class="button">
-                <a
-                  href="https://zoom.us/j/4418578349?pwd=M1MxUWR3MGVqRHAvUDkxS2E5ODhYZz09"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div>
-
-            <div class="common-week">
-              <h2 class="name-class">Інтелектуальний аналіз даних</h2>
-              <h2 class="block-button-lab">Лабораторна робота</h2>
-              <h2 class="time">11:40-13:15</h2>
-              <span class="teacher-name">Кошутіна Д. В.</span>
-              <div class="meet-login">
-                Meeting ID: 570 709 2648 <br />
-                Passcode: 69Hfr6
-              </div>
-              <div class="button">
-                <a
-                  href="https://us05web.zoom.us/j/5707092648?pwd=DEBflOyNbNeFc5LyqkW2CvWvax03ab.1&omn=88967915900"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div>
-
-            <div class="odd-week">
-              <h2 class="name-class">Обчислювальні методи</h2>
-              <h2 class="block-button-lab">Лабораторна робота</h2>
-              <h2 class="time">13:30-15:05</h2>
-              <span class="teacher-name">Шпинь О. А.</span>
-              <div class="button">
-                <a
-                  href="https://teams.microsoft.com/l/meetup-join/19%3ayp3vNP3BqAVPkuW2Y8YqKOKXF0QQlydP0_Y1XiVUDqY1%40thread.tacv2/1724955558997?context=%7b%22Tid%22%3a%22bd2fa240-71fc-45bd-abce-f1bc80beeb0a%22%2c%22Oid%22%3a%226e50c4db-d1c1-4aee-989d-96271729c62c%22%7d"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Wednesday Schedule -->
-          <div class="wednesday">
-            <div class="title">Середа</div>
-
-            <div class="common-week">
-              <h2 class="name-class">Обчислювальні методи</h2>
-              <h2 class="block-button-lection">Лекція</h2>
-              <h2 class="time">11:40-13:15</h2>
-              <span class="teacher-name">Шпинь О. А.</span>
-              <div class="button">
-                <a
-                  href="https://teams.microsoft.com/l/meetup-join/19%3ayp3vNP3BqAVPkuW2Y8YqKOKXF0QQlydP0_Y1XiVUDqY1%40thread.tacv2/1724955558997?context=%7b%22Tid%22%3a%22bd2fa240-71fc-45bd-abce-f1bc80beeb0a%22%2c%22Oid%22%3a%226e50c4db-d1c1-4aee-989d-96271729c62c%22%7d"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div>
-
-            <div class="common-week">
-              <h2 class="name-class">Комп'ютерні мережі</h2>
-              <h2 class="block-button-lab">Лабораторна робота</h2>
-              <h2 class="time">13:30-15:05</h2>
-              <span class="teacher-name">Кузнецов М. О./Засидь Андрій</span>
-              <div class="meet-login">
-                Meeting ID: 925 970 7912 <br />
-                Passcode: 1100
-              </div>
-              <div class="button">
-                <a
-                  href="https://us04web.zoom.us/j/9259707912?pwd=rDktkUw9qYd6nSRfiEN2Ws7VFKbVrl.1"
-                  class="button-link"
-                  target="_blank"
-                  >Підключитись</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <!-- Thursday Schedule -->
-          <div class="thursday">
-            <div class="title">Четвер</div>
-
             <div class="common-week">
               <h2 class="name-class">
-                Технології створення віртуально доповленної реальності
+                Технологія розробки навчально-розвиваючих комп'ютерних ігор
               </h2>
               <h2 class="block-button-lection">Лекція</h2>
               <h2 class="time">9:50-11:25</h2>
-              <span class="teacher-name">Волков А. С.</span>
+              <span class="teacher-name">Волков А.С.</span>
               <div class="meet-login">
                 Meeting ID: 230 795 4280 <br />
                 Passcode: buR4j3
@@ -254,19 +184,74 @@
                 >
               </div>
             </div>
+
+            <div class="common-week">
+              <h2 class="name-class">Технології розп. систем</h2>
+              <h2 class="block-button-lab">Лабораторна робота</h2>
+              <h2 class="time">11:40-13:15</h2>
+              <span class="teacher-name">Агаджанян А.Р. | Вороненко М.О.</span>
+              <div class="meet-login">
+                Meeting ID: 755 2303 1710 <br />
+                Passcode: 1
+              </div>
+
+              <div class="button">
+                <a
+                  href="https://us04web.zoom.us/j/75523031710?pwd=8qb2Fz4vdLcajVKsxlX7chpuQ6PCSH.1"
+                  class="button-link"
+                  target="_blank"
+                  >Підключитись</a
+                >
+              </div>
+            </div>
           </div>
 
-          <!-- Friday Schedule -->
-          <div class="friday">
-            <div class="title">Пʼятниця</div>
+          <!-- Wednesday Schedule -->
+          <div class="wednesday">
+            <div class="title">Середа</div>
 
-            <div class="odd-week">
+            <div class="common-week">
               <h2 class="name-class">
-                Технології створення віртуально доповленної реальності
+                Програмування мобільних пристроїв на базі ОС Android
               </h2>
+              <h2 class="block-button-lection">Лекція</h2>
+              <h2 class="time">9:50-11:25</h2>
+              <span class="teacher-name">Годовіченко М.А. </span>
+              <div class="button">
+                <a
+                  href="https://bit.ly/hodovychenko_zoom"
+                  class="button-link"
+                  target="_blank"
+                  >Підключитись</a
+                >
+              </div>
+            </div>
+
+            <div class="common-week">
+              <h2 class="name-class">Математичні методи</h2>
               <h2 class="block-button-lab">Лабораторна робота</h2>
-              <h2 class="time">8:00-9:35</h2>
-              <span class="teacher-name">Волков А. С.</span>
+              <h2 class="time">11:40-13:15</h2>
+              <span class="teacher-name">Соловйова Д.В</span>
+              <div class="button">
+                <a
+                  href="https://us04web.zoom.us/j/3850184769?pwd=NUpkcWhqTlpwUlVYSkhGbXB4bWM1Zz09"
+                  class="button-link"
+                  target="_blank"
+                  >Підключитись</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Thursday Schedule -->
+          <div class="thursday">
+            <div class="title">Четвер</div>
+
+            <div class="even-week">
+              <h2 class="name-class">Технол. розробки ігор</h2>
+              <h2 class="block-button-lab">Лабораторна робота</h2>
+              <h2 class="time">9:50-11:25</h2>
+              <span class="teacher-name">Волков А.С. | Кошутіна Д.В. </span>
               <div class="button">
                 <a
                   href="https://us04web.zoom.us/j/2307954280?pwd=N0poVTNqRXFzK2E4cCtCT0dNVVlLZz09"
@@ -278,17 +263,19 @@
             </div>
 
             <div class="common-week">
-              <h2 class="name-class">Технології створення ПП</h2>
+              <h2 class="name-class">
+                Математичні методи дослідження операцій
+              </h2>
               <h2 class="block-button-lection">Лекція</h2>
-              <h2 class="time">9:50-11:25</h2>
-              <span class="teacher-name">Блажко О. А.</span>
+              <h2 class="time">11:40-13:15</h2>
+              <span class="teacher-name">д. Болтьонков В.О. </span>
               <div class="meet-login">
-                Meeting ID: 876 4775 3497 <br />
-                Passcode: 306089
+                Meeting ID: 420 970 6766 <br />
+                Passcode: 205010
               </div>
               <div class="button">
                 <a
-                  href="https://us02web.zoom.us/j/87647753497?pwd=eTJzOGo5bGZnNC9NMGRBVFNKRVlQUT09"
+                  href="https://us02web.zoom.us/j/4209706766?pwd=YVhZSHVYWGJOVkZLc2t0VFlkbDdxQT09&&omn=85498519147"
                   class="button-link"
                   target="_blank"
                   >Підключитись</a
@@ -297,16 +284,42 @@
             </div>
 
             <div class="common-week">
-              <h2 class="name-class">ВЕБ-технології та ВЕБ-дизайн</h2>
-              <h2 class="block-button-lection">Лекція</h2>
-              <h2 class="time">11:40-13:15</h2>
-              <span class="teacher-name">Стетхєм</span>
+              <h2 class="name-class">Моделювання систем</h2>
+              <h2 class="block-button-lab">Лабораторна робота</h2>
+              <h2 class="time">13:30-15:05</h2>
+              <span class="teacher-name"
+                >Ніколенко А.О. | Молчиніколова І.А.
+              </span>
+              <div class="meet-login">
+                Meeting ID: 758 1538 7400 <br />
+                Passcode: dvP2D1
+              </div>
               <div class="button">
                 <a
-                  href="https://meet.google.com/ozn-fgoe-xdf"
+                  href="https://us02web.zoom.us/j/75815387400?pwd=NmlqdGZmbW5yK1BuQmFiZXB1S2lKQT09"
                   class="button-link"
                   target="_blank"
                   >Підключитись</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Friday Schedule -->
+          <div class="friday">
+            <div class="title">Пʼятниця</div>
+
+            <div class="common-week">
+              <h2 class="name-class">ХУЙ</h2>
+              <h2 class="block-button-practice">МАША :)</h2>
+              <h2 class="time">ЧЛЕН</h2>
+              <span class="teacher-name">ПІСЮН</span>
+              <div class="button">
+                <a
+                  href="https://www.youtube.com/watch?v=NWb5BtLThU0"
+                  class="button-link"
+                  target="_blank"
+                  >ПРІЧІНДАЛ</a
                 >
               </div>
             </div>

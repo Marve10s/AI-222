@@ -235,3 +235,93 @@ h2 {
       "fr";
   }
 }
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+}
+
+.deadlines-link {
+  background-color: #e74c3c;
+  color: white;
+  margin: 15px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.deadlines-link:hover {
+  background-color: #c0392b;
+}
+
+.button-group {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin: 0 10px;
+}
+
+.student-list-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: #1e90ff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.student-list-icon:hover {
+  color: #1873cc;
+}
+
+.student-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.student-list h3 {
+  color: #333;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #1e90ff;
+}
+
+.student-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.student-list li {
+  padding: 8px 10px;
+  color: #666;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.student-list li:hover {
+  background-color: #f8f9fa;
+}
+
+.student-list::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid white;
+}
