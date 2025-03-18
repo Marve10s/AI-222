@@ -70,14 +70,18 @@ window.addEventListener("load", function () {
   const oddWeekElements = document.querySelectorAll(".odd-week");
   const commonWeekElements = document.querySelectorAll(".common-week");
 
-  // Show even week by default
-  evenWeekElements.forEach((el) => (el.style.display = "block"));
-  oddWeekElements.forEach((el) => (el.style.display = "none"));
+  // Show odd week by default
+  evenWeekElements.forEach((el) => (el.style.display = "none"));
+  oddWeekElements.forEach((el) => (el.style.display = "block"));
   commonWeekElements.forEach((el) => (el.style.display = "block"));
 
-  // Default display message for even week
+  // Default display message for odd week
   document.getElementById("currentWeek").textContent =
-    "Наразі ви переглядаєте: Парний тиждень";
+    "Наразі ви переглядаєте: Непарний тиждень";
+
+  // Set initial button text
+  document.getElementById("toggleWeekBtn").textContent =
+    "Перемкнути на парний тиждень";
 
   // Set the current date
   document.getElementById("currentDate").textContent = formatDate(new Date());
